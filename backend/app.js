@@ -33,6 +33,11 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(helmet());
 app.disable("x-powered-by");
 app.use(requestLogger); // подключаем логгер запросов
+app.get("/crash-test", () => {
+  setTimeout(() => {
+    throw new Error("Сервер сейчас упадёт");
+  }, 0);
+});
 app.use(routerAuth);
 app.use(auth);
 app.use(routerUser);
