@@ -8,7 +8,6 @@ const auth = (req, res, next) => {
     !req.headers.authorization ||
     !req.headers.authorization.startsWith("Bearer ")
   ) {
-    cd;
     next(new CustomeError(noAuth.code, noAuth.message));
   }
   console.log(req.headers.authorization);
