@@ -10,7 +10,6 @@ const auth = (req, res, next) => {
   ) {
     next(new CustomeError(noAuth.code, noAuth.message));
   }
-  console.log(req.headers.authorization);
   const token = req.headers.authorization.replace("Bearer ", "");
   isJWT(token)
     ? (req.user = { _id: getPayload(token)._id })
