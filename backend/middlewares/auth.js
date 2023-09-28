@@ -3,12 +3,11 @@ const { CustomeError } = require("../utils/handlerErrors");
 const { errLogin, noAuth } = require("../errors");
 
 const auth = (req, res, next) => {
-  console.log(noAuth.message, "4123412342");
   if (
     !req.headers.authorization ||
     !req.headers.authorization.startsWith("Bearer ")
   ) {
-    next(new CustomeError(noAuth.code, noAuth.message));
+    return next(new CustomeError(noAuth.code, noAuth.message));
   }
   const token = req.headers.authorization.replace("Bearer ", "");
   isJWT(token)
