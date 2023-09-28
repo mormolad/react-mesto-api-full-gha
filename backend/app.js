@@ -40,7 +40,9 @@ app.use(routerCard);
 app.use(router);
 app.use(errorLogger); // подключаем логгер ошибок
 app.use(errors());
-app.use(sendError);
+app.use((err, req, res, next) => {
+  sendError(err, req, res);
+});
 app.listen(PORT, () => {
   console.log(`server start, listen port: ${PORT}`);
 });
