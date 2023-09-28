@@ -6,7 +6,6 @@ class CustomeError extends Error {
 }
 
 function sendError(err, req, res) {
-  console.log(err.message, "сообщение об ошибке");
   if (err.statusCode) {
     return res.status(err.statusCode).send({ message: err.message });
   }
