@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес  IP 158.160.122.115
+IP 158.160.122.115
 
 Frontend https://mormolad.nomoredomainsrocks.ru
 
