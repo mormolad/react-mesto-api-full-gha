@@ -13,6 +13,7 @@ class Api extends СheckResponse {
       method: 'GET',
       headers: this.headers,
     }).then((res) => {
+      console.log(res);
       return this._checkResponse(res);
     });
   }
