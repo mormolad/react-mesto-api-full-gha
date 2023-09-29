@@ -1,0 +1,17 @@
+.not-login-page__content {
+  width: 358px;
+  padding-bottom: 17px;
+  background-color: #000000;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  grid-template-rows: minmax(57px, auto) minmax(57px, auto) 266px;
+}
+
+@media screen and (max-width: 1023px) {
+  .not-login-page__content {
+    width: 282px;
+    padding-bottom: 0px;
+    grid-template-rows: minmax(57px, auto) minmax(57px, auto) 215px 50px;
+  }
+}

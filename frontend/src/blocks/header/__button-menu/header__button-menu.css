@@ -1,0 +1,10 @@
+.header__button-menu {
+  padding: 0;
+  border: none;
+  background-color: black;
+}
+
+.header__button-menu:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}

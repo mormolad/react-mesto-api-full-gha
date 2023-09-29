@@ -1,0 +1,13 @@
+.not-login-page {
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  margin: 55px auto 0 auto;
+  grid-template-rows: min-content min-content 266px;
+}
+
+@media screen and (max-width: 1023px) {
+  .not-login-page {
+    margin-top: 35px;
+  }
+}

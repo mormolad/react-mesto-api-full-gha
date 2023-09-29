@@ -1,0 +1,14 @@
+.not-login-page__sub-text-button {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  margin: 0 auto;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .not-login-page__sub-text-button {
+    margin-top: 25px;
+  }
+}

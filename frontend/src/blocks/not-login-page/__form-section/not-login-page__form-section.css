@@ -1,0 +1,11 @@
+.not-login-page__form-section {
+  width: 358px;
+  margin: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .not-login-page__form-section {
+    width: 238px;
+    margin: auto;
+  }
+}

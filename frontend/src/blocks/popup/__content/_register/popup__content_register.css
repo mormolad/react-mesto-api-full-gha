@@ -1,0 +1,8 @@
+.popup__content_register {
+  grid-template-rows: 228px minmax(99px, auto);
+}
+@media screen and (max-width: 1023px) {
+  .popup__content_register {
+    grid-template-rows: 210px minmax(99px, auto);
+  }
+}
