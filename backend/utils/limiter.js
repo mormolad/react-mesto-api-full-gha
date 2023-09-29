@@ -7,5 +7,5 @@ const limiter = rateLimit({
   legacyHeaders: false, // Disable the `X-RateLimit-*` headers
   // store: ... , // Use an external store for more precise rate limiting
 });
-
+console.log("fsfs");
 module.exports = { limiter };
