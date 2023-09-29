@@ -28,7 +28,7 @@ mongoose
   });
 
 const app = express();
-app.use(limiter);
+
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "public")));
@@ -40,6 +40,7 @@ app.get("/crash-test", () => {
     throw new Error("Сервер сейчас упадёт");
   }, 0);
 });
+app.use(limiter);
 app.use(routerAuth);
 app.use(auth);
 app.use(routerUser);
