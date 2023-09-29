@@ -40,7 +40,7 @@ app.get("/crash-test", () => {
     throw new Error("Сервер сейчас упадёт");
   }, 0);
 });
-app.use(limiter);
+//app.use(limiter);
 app.use(routerAuth);
 app.use(auth);
 app.use(routerUser);
