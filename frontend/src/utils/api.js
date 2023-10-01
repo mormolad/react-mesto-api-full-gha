@@ -77,7 +77,7 @@ class Api extends СheckResponse {
   }
 }
 const api = new Api({
-  url: 'http://api.mormolad.nomoredomainsrocks.ru/',
+  url: 'https://api.mormolad.nomoredomainsrocks.ru/',
   headers: {
     'Content-Type': 'application/json',
     Authorization: `Bearer ${localStorage.jwt}`,

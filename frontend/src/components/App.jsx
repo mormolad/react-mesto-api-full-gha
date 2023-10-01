@@ -19,7 +19,6 @@ function App() {
       .then((res) => {
         setEmailUser(res.message.email);
         setLoggedIn(true);
-        console.log('check token', jwt);
       })
       .catch((err) => {
         console.log('ошибка проверки токена', err);
@@ -28,7 +27,6 @@ function App() {
   }
 
   useEffect(() => {
-    console.log('localStorage.jwt', localStorage.jwt);
     if (localStorage.getItem('jwt')) {
       chekToken(localStorage.jwt);
     }

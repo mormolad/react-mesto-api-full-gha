@@ -37,7 +37,7 @@ class Auth extends СheckResponse {
 }
 
 const auth = new Auth({
-  url: 'http://api.mormolad.nomoredomainsrocks.ru/',
+  url: 'https://api.mormolad.nomoredomainsrocks.ru/',
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',

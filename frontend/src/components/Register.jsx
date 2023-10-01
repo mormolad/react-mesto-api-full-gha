@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 function Register(props) {
-  console.log(props);
   const [isStatusAuthPopupOpen, setIsStatusAuthPopupOpen] = useState(false);
   const [titlePopup, setTitlePopup] = useState('');
   const [registerStatus, setRegisterStatus] = useState(false);

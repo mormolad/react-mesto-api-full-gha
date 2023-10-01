@@ -30,7 +30,7 @@ function UserPage({ emailUser, setLoggedIn, loggedIn }) {
     setIsImagePopupOpen(false);
     setIsCardDeletePopupOpen(false);
   };
-
+  api.headers.Authorization = 'Bearer ' + localStorage.jwt;
   //запрашиваем данные с сервера для ползователя и для отрисовки карточек
   React.useEffect(() => {
     api
