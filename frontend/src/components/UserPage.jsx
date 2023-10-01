@@ -31,6 +31,7 @@ function UserPage({ emailUser, setLoggedIn, loggedIn }) {
     setIsCardDeletePopupOpen(false);
   };
   api.headers.Authorization = 'Bearer ' + localStorage.jwt;
+
   //запрашиваем данные с сервера для ползователя и для отрисовки карточек
   React.useEffect(() => {
     api
@@ -46,6 +47,7 @@ function UserPage({ emailUser, setLoggedIn, loggedIn }) {
       })
       .catch(console.error);
   }, []);
+
   //обработкик клика по лайку
   function handleCardLike(card) {
     // Снова проверяем, есть ли уже лайк на этой карточке
@@ -86,7 +88,6 @@ function UserPage({ emailUser, setLoggedIn, loggedIn }) {
     api
       .setUserData(userDate)
       .then((data) => {
-        console.log(data);
         closeAllPopups();
         setCurentUser({
           ...currentUser,
@@ -116,9 +117,8 @@ function UserPage({ emailUser, setLoggedIn, loggedIn }) {
     api
       .setNewCadr(dataCard)
       .then((data) => {
+        setCards([data.message, ...cards]);
         closeAllPopups();
-        console.log(data);
-        setCards([data, ...cards]);
       })
       .catch(console.error);
   }

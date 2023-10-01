@@ -18,15 +18,16 @@ function Card({ card, onCardClick, onClickLike, onClickDelete }) {
   // подписываемся на контекст
   const currentUser = React.useContext(CurrentUserContext);
 
-  const checkLikeOwnerPage = (element, index, arry) => {
-    return element === currentUser._id;
-  };
   // Создаём переменную, которую после зададим в `className` для кнопки лайка
-  const cardLikeButtonClassName = ` ${
-    card.likes.some(checkLikeOwnerPage)
-      ? 'card__like-button card__like_state_active'
-      : 'card__like-button'
-  }`;
+  const cardLikeButtonClassName = card.likes
+    ? ` ${
+        card.likes.some((element, index, arry) => {
+          return element === currentUser._id;
+        })
+          ? 'card__like-button card__like_state_active'
+          : 'card__like-button'
+      }`
+    : 'card__like-button';
 
   return (
     <li className="card" key={card._id}>
@@ -43,7 +44,9 @@ function Card({ card, onCardClick, onClickLike, onClickDelete }) {
           className={`card__like ${cardLikeButtonClassName}`}
           onClick={handleLikeClick}
         ></button>
-        <p className="card__numberOfLike">{card.likes.length}</p>
+        <p className="card__numberOfLike">
+          {card.likes ? card.likes.length : 0}
+        </p>
       </div>
       {card.owner === currentUser._id && (
         <button
